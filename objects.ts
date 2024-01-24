@@ -21,3 +21,24 @@ const anotherHuman: Human = {
   age: 22,
   job: "student",
 };
+
+//creating nested object
+type Restuarnt = {
+  name: string;
+  status: "open" | "close";
+  workers: {
+    name: string[];
+    workExperience: number[];
+    positoins: string;
+  };
+};
+
+const r1: Restuarnt = {
+  name: "Jack and Jin",
+  status: "open",
+  workers: {
+    name: ["alice", "jones"],
+    workExperience: [2, 3],
+    positoins: "Butler",
+  },
+};

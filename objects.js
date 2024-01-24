@@ -11,3 +11,12 @@ var anotherHuman = {
     age: 22,
     job: "student",
 };
+var r1 = {
+    name: "Jack and Jin",
+    status: "open",
+    workers: {
+        name: ["alice", "jones"],
+        workExperience: [2, 3],
+        positoins: "Butler",
+    },
+};
