@@ -42,3 +42,19 @@ const r1: Restuarnt = {
     positoins: "Butler",
   },
 };
+
+//using 2 type togather
+type simpleDemention = {
+  oneD: number;
+  twoD: number;
+};
+
+type anotherDemention = {
+  threeD: number;
+};
+//now we can use all three property in this variable
+const allDementions: simpleDemention & anotherDemention = {
+  oneD: 1,
+  twoD: 2,
+  threeD: 3,
+};

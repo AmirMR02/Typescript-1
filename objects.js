@@ -20,3 +20,9 @@ var r1 = {
         positoins: "Butler",
     },
 };
+//now we can use all three property in this variable
+var allDementions = {
+    oneD: 1,
+    twoD: 2,
+    threeD: 3,
+};
