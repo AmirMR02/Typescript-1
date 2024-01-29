@@ -5,3 +5,5 @@ threeNumber.push(4);
 threeNumber.pop();
 //another array definition type
 var threeNumbewr2 = [1, 2, 3];
+var thisNumbers = [];
+thisNumbers.push({ x: 1, y: 4 });

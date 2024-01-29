@@ -7,3 +7,12 @@ threeNumber.pop();
 
 //another array definition type
 const threeNumbewr2: Array<number> = [1, 2, 3];
+
+//making type Object and pass it to array
+type thisType = {
+  x: number;
+  y: number;
+};
+
+let thisNumbers: Array<thisType> = [];
+thisNumbers.push({ x: 1, y: 4 });
