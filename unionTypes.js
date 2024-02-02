@@ -6,3 +6,9 @@ twoT = "2"; //accept
 var cp;
 cp = { x: 2, y: 3 };
 cp = { lat: 2312, long: 344 };
+//union types in function
+function printSomething(n) {
+    console.log(n);
+}
+printSomething("i will be compiled");
+printSomething(1234);

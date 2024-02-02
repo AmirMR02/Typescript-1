@@ -19,3 +19,11 @@ let cp: coord | points;
 
 cp = { x: 2, y: 3 };
 cp = { lat: 2312, long: 344 };
+
+//union types in function
+function printSomething(n: string | number): void {
+  console.log(n);
+}
+
+printSomething("i will be compiled");
+printSomething(1234);
