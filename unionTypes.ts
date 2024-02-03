@@ -27,3 +27,28 @@ function printSomething(n: string | number): void {
 
 printSomething("i will be compiled");
 printSomething(1234);
+
+/**
+ * there is an issue in union types and that is when we want to accept 
+ * a paramter in function with them , if we want to calculate it or doing
+ * other operation , Typescript will complain about it
+ * lets see this exzample
+ * 
+  function calculateTaxForYou(money : string | number,tax : number) {
+      return money * tax
+  }
+  in this example money is not something that we can do the operation
+
+  *so what is the solution?
+  * it something we call it "TYPE NARROWING"
+  * means check the type and then do the operation in these situations
+ */
+//solution :
+function calculateTaxForYou(money: string | number, tax: number) {
+  if (typeof money === "string") {
+    money = parseFloat(money.replace("$", "")); //if money = $23 ==> 23
+  }
+  return money * tax;
+}
+calculateTaxForYou("$23", 1.45); //correct
+calculateTaxForYou(23, 1.45); //correct
