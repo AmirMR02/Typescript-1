@@ -36,3 +36,7 @@ function calculateTaxForYou(money, tax) {
 }
 calculateTaxForYou("$23", 1.45); //correct
 calculateTaxForYou(23, 1.45); //correct
+//constant lentgh of union type
+var conslength;
+conslength = "a"; // accept
+//conslength = "f"; //Error : f is not a value in union types in conslentgh;length

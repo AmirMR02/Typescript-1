@@ -52,3 +52,8 @@ function calculateTaxForYou(money: string | number, tax: number) {
 }
 calculateTaxForYou("$23", 1.45); //correct
 calculateTaxForYou(23, 1.45); //correct
+
+//constant lentgh of union type
+let conslength: "a" | "b" | "c";
+conslength = "a"; // accept
+//conslength = "f"; //Error : f is not a value in union types in conslentgh;length
