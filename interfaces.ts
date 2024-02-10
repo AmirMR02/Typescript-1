@@ -10,3 +10,15 @@ interface Country {
 }
 
 const IRAN: Country = { name: "Iran", capital: "Tehran", population: 87.92 };
+
+//we can have readonly property in objects so we can have this on interfaces
+
+interface Employee {
+  readonly ID: number;
+  name: string;
+  age?: number; //we can leave this without value
+}
+
+const mySelf: Employee = { ID: 1234, name: "amirmohammad" };
+//trying change ID
+// mySelf.ID = 1; //Error
