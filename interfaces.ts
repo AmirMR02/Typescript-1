@@ -16,9 +16,18 @@ const IRAN: Country = { name: "Iran", capital: "Tehran", population: 87.92 };
 interface Employee {
   readonly ID: number;
   name: string;
-  age?: number; //we can leave this without value
+  age: number;
 }
 
-const mySelf: Employee = { ID: 1234, name: "amirmohammad" };
+const mySelf: Employee = { ID: 1234, name: "amirmohammad", age: 23 };
 //trying change ID
 // mySelf.ID = 1; //Error
+
+//we can have optional property :
+interface Employee2 {
+  readonly ID: number;
+  name: string;
+  age?: number;
+}
+
+const mySelf2: Employee2 = { ID: 124, name: "amirmohammad" };
