@@ -31,3 +31,22 @@ interface Employee2 {
 }
 
 const mySelf2: Employee2 = { ID: 124, name: "amirmohammad" };
+
+//how we add a method to an interface
+//in the objects :
+class methodInObjects {
+  greet(): void {
+    console.log("hello i am in class");
+  }
+}
+
+//for interfaces we have to define the general method and then
+//we will descripbe the codes for runnig in the function(method)
+interface methodInInterface {
+  hi(): void;
+}
+const MII: methodInInterface = {
+  hi() {
+    console.log("Hello guys!");
+  },
+};
