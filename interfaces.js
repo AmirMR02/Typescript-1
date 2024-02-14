@@ -16,3 +16,9 @@ var MII = {
         console.log("Hello guys!");
     },
 };
+var testParamter = {
+    name: "amirmohammad",
+    greet: function (name) {
+        return "hello ".concat(name);
+    },
+};

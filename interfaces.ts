@@ -50,3 +50,16 @@ const MII: methodInInterface = {
     console.log("Hello guys!");
   },
 };
+
+//writting methods with parameter:
+interface methodWithParameterInInterfaces {
+  name: string;
+  greet(name: string): string;
+}
+
+const testParamter: methodWithParameterInInterfaces = {
+  name: "amirmohammad",
+  greet(name: string) {
+    return `hello ${name}`;
+  },
+};
