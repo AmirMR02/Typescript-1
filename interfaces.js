@@ -22,3 +22,4 @@ var testParamter = {
         return "hello ".concat(name);
     },
 };
+var TestReopening = { name: "test", age: 12 };

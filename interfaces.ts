@@ -63,3 +63,16 @@ const testParamter: methodWithParameterInInterfaces = {
     return `hello ${name}`;
   },
 };
+
+//reopening interfaces :
+// we can add other property or methods after our code again:
+interface reopening {
+  name: string;
+}
+
+//we add property here
+interface reopening {
+  age: number;
+}
+
+const TestReopening: reopening = { name: "test", age: 12 };
