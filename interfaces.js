@@ -23,3 +23,8 @@ var testParamter = {
     },
 };
 var TestReopening = { name: "test", age: 12 };
+var mycat = {
+    breed: "asian",
+    color: "white",
+    gender: "female",
+};

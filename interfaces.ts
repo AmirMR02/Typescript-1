@@ -76,3 +76,19 @@ interface reopening {
 }
 
 const TestReopening: reopening = { name: "test", age: 12 };
+
+//we can extend an interface like we jabe in objects and classes
+interface animal {
+  breed: string;
+  color: string;
+}
+
+interface animalWithGender extends animal {
+  gender: "male" | "female";
+}
+
+const mycat: animalWithGender = {
+  breed: "asian",
+  color: "white",
+  gender: "female",
+};
