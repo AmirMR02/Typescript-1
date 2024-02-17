@@ -92,3 +92,25 @@ const mycat: animalWithGender = {
   color: "white",
   gender: "female",
 };
+
+//another example
+interface Employee3 {
+  name: string;
+  Age: number;
+  level: "New" | "Elder" | "Co-leader" | "Leader";
+}
+
+interface partTimeEmployee3 extends Employee3 {
+  WorkHoursInWeek: number;
+}
+
+interface FullTimeEmployee3 extends Employee3 {
+  WorkHoursInWeek: number;
+}
+
+const em1: partTimeEmployee3 = {
+  name: "amirmohammad",
+  Age: 22,
+  level: "New",
+  WorkHoursInWeek: 9,
+};

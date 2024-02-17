@@ -28,3 +28,9 @@ var mycat = {
     color: "white",
     gender: "female",
 };
+var em1 = {
+    name: "amirmohammad",
+    Age: 22,
+    level: "New",
+    WorkHoursInWeek: 9,
+};
