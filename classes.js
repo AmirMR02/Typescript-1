@@ -21,3 +21,14 @@ myHome.doors = 1;
 myHome.windows = 4;
 myHome.rooms = 2;
 myHome.floor = 1;
+
+//constructors : they will run after an object create;
+class square {
+  constructor() {
+    console.log("a square created");
+  }
+  width;
+  height;
+}
+
+const s1 = new square();
