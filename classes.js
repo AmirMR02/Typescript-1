@@ -32,3 +32,21 @@ class square {
 }
 
 const s1 = new square();
+
+//class fileds
+//these just simple properties that are not even method and will declare out
+//of cinstructors ,and we can use them
+
+class game {
+  name;
+  level;
+  difficulty;
+
+  constrctor() {
+    console.log("we create a game");
+  }
+
+  hi() {
+    console.log("welcome to our game");
+  }
+}
