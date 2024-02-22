@@ -50,3 +50,10 @@ class game {
     console.log("welcome to our game");
   }
 }
+
+//,making a property private
+class thisHasPrivate {
+  #name;
+}
+
+// const a : thisHasPrivate = {#name : "Amir"}; //We Can't Change it;
