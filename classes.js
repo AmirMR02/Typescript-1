@@ -57,3 +57,18 @@ class thisHasPrivate {
 }
 
 // const a : thisHasPrivate = {#name : "Amir"}; //We Can't Change it;
+
+//getter
+class sayThisIsNotEnough {
+  firstName;
+  lastName;
+
+  get fullName() {
+    console.log(`${this.firstName} ${this.lastName}`);
+  }
+}
+
+const personOntheWay = new sayThisIsNotEnough();
+personOntheWay.firstName = "Amir";
+personOntheWay.lastName = "Rashvand";
+personOntheWay.firstName();
