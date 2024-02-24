@@ -72,3 +72,16 @@ const personOntheWay = new sayThisIsNotEnough();
 personOntheWay.firstName = "Amir";
 personOntheWay.lastName = "Rashvand";
 personOntheWay.firstName();
+//setter
+//with setter with can set property
+//* the point is we can like access an private property and setvalue to it
+class sayThisIsNotEnough2 {
+  #firstName = "no name";
+
+  set settName(fn) {
+    this.#firstName = fn;
+  }
+}
+
+const personOntheWay2 = new sayThisIsNotEnough2();
+personOntheWay.name = "amirmohammad";
