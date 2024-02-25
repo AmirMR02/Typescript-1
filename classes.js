@@ -85,3 +85,12 @@ class sayThisIsNotEnough2 {
 
 const personOntheWay2 = new sayThisIsNotEnough2();
 personOntheWay.name = "amirmohammad";
+
+//static method and properties
+//when we use static , we make methos and properties unreachable
+class DontAccess {
+  static password = 1234;
+}
+
+const newPass = new DontAccess();
+newPass.password; //Will be undefined
