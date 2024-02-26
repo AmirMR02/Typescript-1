@@ -94,3 +94,21 @@ class DontAccess {
 
 const newPass = new DontAccess();
 newPass.password; //Will be undefined
+
+//extends :
+//extends keyword uses for inheritance in clases :
+class Father {
+  name = "miller watson";
+  age = 44;
+  eyeColor = "green";
+}
+
+class Son extends Father {
+  classLevel = "high school";
+}
+
+const newSon = new Son();
+newSon.name = "jamy watson";
+newSon.age = 23;
+newSon.eyeColor = "brown";
+newSon.classLevel = "colleague";
