@@ -112,3 +112,25 @@ newSon.name = "jamy watson";
 newSon.age = 23;
 newSon.eyeColor = "brown";
 newSon.classLevel = "colleague";
+
+//the dreaded super()
+/**
+ * we have to call Father class constructors for adding another item in
+ * consturctor in child class
+ * in simple word we don't repeat :
+ *                this.x = x
+ * in Child class
+ */
+class Father2 {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Son2 extends Father2 {
+  constructor(name, age, eyeColor) {
+    super(name, age); //we didn't use this.x = x and etc . instead we use super();
+    this.eyeColor = eyeColor;
+  }
+}
