@@ -21,3 +21,13 @@ polymorphism(true);
  *             retur items //which is string
  * }
  */
+
+//having mutipile type n generics
+function mergeThese<T1, T2>(obj1: T1, obj2: T2) {
+  return {
+    ...obj1,
+    ...obj2,
+  };
+}
+
+mergeThese("amir", 2);
