@@ -21,3 +21,11 @@ function TestSum(a: number | string, b: number) {
 
 TestSum(10, 12); //accept
 TestSum("ball", 12); //accept
+
+//the second type narrowing is when we have a null or undefined value
+function testItem(item: string | null) {
+  if (!item) {
+    throw new Error("there is nothing here!put something");
+  }
+  return `${item}, is what you said`;
+}
