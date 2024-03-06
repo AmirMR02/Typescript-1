@@ -18,3 +18,22 @@ function TestSum(a, b) {
 }
 TestSum(10, 12); //accept
 TestSum("ball", 12); //accept
+//the second type narrowing is when we have a null or undefined value
+function testItem(item) {
+    if (!item) {
+        throw new Error("there is nothing here!put something");
+    }
+    return "".concat(item, ", is what you said");
+}
+//equality function
+//we also use === for typechecking
+function EqualityFunction(x, y) {
+    if (x === y) {
+        x.toLowerCase();
+        y.toLowerCase();
+    }
+    console.log(x, y);
+    return "Final";
+}
+EqualityFunction("Test", "Function");
+EqualityFunction(true, 12);

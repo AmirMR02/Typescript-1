@@ -29,3 +29,17 @@ function testItem(item: string | null) {
   }
   return `${item}, is what you said`;
 }
+
+//equality function
+//we also use === for typechecking
+function EqualityFunction(x: boolean | string, y: string | number) {
+  if (x === y) {
+    x.toLowerCase();
+    y.toLowerCase();
+  }
+  console.log(x, y);
+  return "Final";
+}
+
+EqualityFunction("Test", "Function");
+EqualityFunction(true, 12);
