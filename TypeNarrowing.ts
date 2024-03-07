@@ -43,3 +43,24 @@ function EqualityFunction(x: boolean | string, y: string | number) {
 
 EqualityFunction("Test", "Function");
 EqualityFunction(true, 12);
+
+//using "in" operator:
+//we use this operator for checking "if property X exist in an object or not";
+type catObject = {
+  mewo: () => void;
+};
+
+type dogObject = {
+  bark: () => void;
+};
+
+function propertyCheck(item: catObject | dogObject) {
+  if ("mewo" in item) {
+    console.log("cat was found in this object");
+  } else {
+    console.log("Ooops , this is a dog");
+  }
+}
+
+const pet: catObject = { mewo: () => "mewo" };
+propertyCheck(pet);

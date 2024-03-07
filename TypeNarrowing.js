@@ -37,3 +37,13 @@ function EqualityFunction(x, y) {
 }
 EqualityFunction("Test", "Function");
 EqualityFunction(true, 12);
+function propertyCheck(item) {
+    if ("mewo" in item) {
+        console.log("cat was found in this object");
+    }
+    else {
+        console.log("Ooops , this is a dog");
+    }
+}
+var pet = { mewo: function () { return "mewo"; } };
+propertyCheck(pet);
