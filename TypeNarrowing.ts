@@ -64,3 +64,16 @@ function propertyCheck(item: catObject | dogObject) {
 
 const pet: catObject = { mewo: () => "mewo" };
 propertyCheck(pet);
+
+//instaceof :
+//we use this operator for check if an Object extends from anoher object or not
+
+function instanceofChecker(item: Date | string) {
+  if (item instanceof Date) {
+    return `date : ${item.toUTCString()}`;
+  } else {
+    return `date is :${new Date()}`;
+  }
+}
+
+console.log(instanceofChecker(new Date()));

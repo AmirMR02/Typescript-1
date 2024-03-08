@@ -47,3 +47,14 @@ function propertyCheck(item) {
 }
 var pet = { mewo: function () { return "mewo"; } };
 propertyCheck(pet);
+//instaceof :
+//we use this operator for check if an Object extends from anoher object or not
+function instanceofChecker(item) {
+    if (item instanceof Date) {
+        return "date : ".concat(item.toUTCString());
+    }
+    else {
+        return "date is :".concat(new Date());
+    }
+}
+console.log(instanceofChecker(new Date()));
