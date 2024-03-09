@@ -77,3 +77,34 @@ function instanceofChecker(item: Date | string) {
 }
 
 console.log(instanceofChecker(new Date()));
+
+//type predicates
+interface cat2 {
+  name: string;
+  numLives: number;
+}
+
+interface dog2 {
+  name: string;
+  breed: string;
+}
+
+function isCat(animal: cat2 | dog2): animal is cat2 {
+  return (animal as cat2).numLives !== undefined;
+}
+
+function makeNoise(animal: dog2 | cat2): string {
+  if (isCat(animal)) {
+    animal;
+    return "MEowwwww";
+  } else {
+    animal;
+    return "Bark";
+  }
+}
+
+const testCat: dog2 = {
+  name: "jully",
+  breed: "pitbul",
+};
+console.log(makeNoise(testCat));

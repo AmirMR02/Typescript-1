@@ -58,3 +58,21 @@ function instanceofChecker(item) {
     }
 }
 console.log(instanceofChecker(new Date()));
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        animal;
+        return "MEowwwww";
+    }
+    else {
+        animal;
+        return "Bark";
+    }
+}
+var testCat = {
+    name: "jully",
+    breed: "pitbul",
+};
+console.log(makeNoise(testCat));
