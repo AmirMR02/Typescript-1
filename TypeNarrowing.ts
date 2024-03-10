@@ -108,3 +108,79 @@ const testCat: dog2 = {
   breed: "pitbul",
 };
 console.log(makeNoise(testCat));
+
+//Discriminated inions:
+/**
+ * consider we have two object that has common property and value in case:
+ */
+interface Cow {
+  name: string;
+  weight: number;
+  age: number;
+}
+
+interface Rooster {
+  name: string;
+  weight: number;
+  age: number;
+}
+
+/**
+ * as we see in this example , they are the same so
+ * how can we recognise which one is our object .
+ * see this code :
+ *       const a : Cow | Rooster;
+ *        if(a.weight) {
+ *                      //do sometinhg
+ *                }
+ * the problem is typescript can not decide how to do that so we have to use
+ * something like switchcase for that
+ */
+
+const discriminatedUnions: Cow | Rooster = {
+  name: "name",
+  weight: 52,
+  age: 12,
+};
+
+/**but there is another problem
+ * we can't still know which is "Cow" or "Rooster"
+ * we have to paste a special value and property to all these objects that has common properties
+ * then we mae a function for doing the switch case for it
+ */
+interface Cow2 {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "cow";
+}
+
+interface Rooster2 {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "rooster";
+}
+
+const discriminatedUnions2: Cow2 | Rooster2 = {
+  name: "cowy cowy",
+  weight: 52,
+  age: 12,
+  kind: "cow",
+};
+
+function checkDiscriminated(animal: Cow2 | Rooster2) {
+  switch (animal.kind) {
+    case "cow":
+      console.log("this is a cow");
+      break;
+    case "rooster":
+      console.log("rooster");
+      break;
+    default:
+      console.log("Nothing was created");
+      break;
+  }
+}
+
+checkDiscriminated(discriminatedUnions2);

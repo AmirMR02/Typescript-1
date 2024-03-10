@@ -76,3 +76,39 @@ var testCat = {
     breed: "pitbul",
 };
 console.log(makeNoise(testCat));
+/**
+ * as we see in this example , they are the same so
+ * how can we recognise which one is our object .
+ * see this code :
+ *       const a : Cow | Rooster;
+ *        if(a.weight) {
+ *                      //do sometinhg
+ *                }
+ * the problem is typescript can not decide how to do that so we have to use
+ * something like switchcase for that
+ */
+var discriminatedUnions = {
+    name: "name",
+    weight: 52,
+    age: 12,
+};
+var discriminatedUnions2 = {
+    name: "cowy cowy",
+    weight: 52,
+    age: 12,
+    kind: "cow",
+};
+function checkDiscriminated(animal) {
+    switch (animal.kind) {
+        case "cow":
+            console.log("this is a cow");
+            break;
+        case "rooster":
+            console.log("rooster");
+            break;
+        default:
+            console.log("Nothing was created");
+            break;
+    }
+}
+checkDiscriminated(discriminatedUnions2);
