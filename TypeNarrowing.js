@@ -112,3 +112,4 @@ function checkDiscriminated(animal) {
     }
 }
 checkDiscriminated(discriminatedUnions2);
+//end of this section

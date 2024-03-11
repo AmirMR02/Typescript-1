@@ -184,3 +184,5 @@ function checkDiscriminated(animal: Cow2 | Rooster2) {
 }
 
 checkDiscriminated(discriminatedUnions2);
+
+//end of this section
